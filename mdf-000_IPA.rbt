@@ -1,0 +1,48 @@
+# Moksha mdf-000
+# based on https://en.wikipedia.org/wiki/Moksha_language#Phonology
+# and "Основы финно-угорского языкознания" by Лыткин В.И., Майтинская К.Е., Редеи К.
+
+::Any-Lower();
+
+
+лх → l̥;
+льх → l̥ʲ;
+рх → ̥r;
+рьх → ̥rʲ;
+йх → ç;
+
+n { з → ʒ; # phoneme z in the position after sonorants n, nʲ turns into ʒ, ʒʲ
+
+а → a;
+б → b;
+в → v;
+г → ɡ;
+д → d;
+е → je;
+ё → jo;
+ж → ʒ;
+з → z;
+и → i;
+й → j;
+к → k;
+л → l;
+м → m;
+н → n;
+о → o;
+п → p;
+р → r;
+с → s;
+т → t;
+у → u;
+ф → f;
+х → x;    
+ц → t͡s;
+ч → t͡ɕ;
+ш → ʃ;
+щ → ɕt͡ɕ; 
+ъ → ə; 
+ы → ɨ;
+ь → ʲ;
+э → e;
+ю → ju;
+я → ja;

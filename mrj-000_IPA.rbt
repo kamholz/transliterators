@@ -1,0 +1,70 @@
+#Hill Mari
+# based on Reading Hill Mari through Meadow Mari, Release 1.0
+# by Nadezhda Krasnova, Timothy Riese, Tatiana Yefremova, Jeremy Bradley
+# which can be found at mari-language.com
+#
+# Originally prepared by Alina Korshunova <alinakor2202@gmail.com>
+
+::Any-Lower();
+
+$wordBoundary = [^[:L:][:M:]];
+$C = [b β ɡ d ʒ z j k l m n p r s t f χ {t͡s} ʃ {t͡ʃ} ɲ ʎ {tʲ}];
+
+[ɲ ʎ ʲ] { j → ;
+
+н } [ю я ь] → ɲ;
+л } [ю я ь] → ʎ;
+т } [ю я ь] → tʲ;
+
+[æ ə ø y e i] $C* { а → æ; 
+[æ ə ø y e i] $C* { ы → ə;
+[æ ə ø y e i] $C* { о → ø;
+[æ ə ø y e i] $C* { у → y; 
+
+нг } $wordBoundary → ŋ;
+нг → ŋɡ;
+
+[a æ ɤ e i o ø u y ə] { е → je;
+[ьъ] е → je;
+$wordBoundary { е → je;
+
+а → a;
+ӓ → æ;
+б → b;
+в → β;
+г → ɡ;
+д → d;
+е → e;
+ё → jo;
+ж → ʒ;
+з → z;
+и → i;
+й → j;
+к → k;
+л → l;
+м → m;
+н → n;
+ҥ → ŋ;
+о → o;
+ӧ → ø;
+п → p;
+р → r;
+с → s;
+т → t;
+у → u;
+ӱ → y;
+ф → f;
+х → χ;
+ц → t͡s;
+ч → t͡ʃ;
+ш → ʃ;
+щ → ʃt͡ʃ;
+ъ →  ;
+ы → ɤ;
+ӹ → ə;
+ь →  ;
+э → e;
+[æ ə ø y e i] $C* { ю → | jy; 
+ю → | ju;
+[æ ə ø y e i] $C* { я → | jæ; 
+я → | ja;

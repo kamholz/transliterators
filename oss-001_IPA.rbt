@@ -1,0 +1,56 @@
+# digoron oss-001
+#based on A Grammar Sketch of Ossetian by Stephen P. Hill and Herbert H. Paper, 1964
+# and Дигорский диалект осетинского языка by М.И.Исаев
+#Originally prepared by Alina Korshunova <alinakor2202@gmail.com>
+
+::Any-Lower();
+
+гъу → ʁʷ;
+къу → kʼʷ;
+хъу → qʷ; 
+гу → ɡʷ;
+гъ → ʁ;
+дж → d͡ʒ;
+дз → d͡z;
+ку → kʷ;
+къ → kʼ;
+пъ → pʼ;
+тъ → tʼ;
+ху → χʷ;
+хъ → q;
+цъ → t͡sʼ;
+чъ → t͡ʃʼ;
+
+у} [а ӕ е и о у ы] → w;
+[a ɐ e i o u ɘ] { у → w; 
+с} [и е] → sʲ;
+з} [и е] → zʲ;
+
+а → a;
+ӕ → ə;
+б → b;
+в → v;
+г → ɡ;
+д → d;
+е → e;
+з → z;
+и → i;
+й → j;
+к → k;
+л → l;
+м → m;
+н → n; 
+о → o;
+п → p;
+р → r;
+с → s;
+т → t;
+у → u;
+ф → f;
+х → χ;
+ц → t͡s; 
+ч → t͡ʃ; 
+ы → ɘ; 
+э → ɛ;
+ш → ʃ;
+щ → ɕ;

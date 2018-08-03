@@ -1,0 +1,56 @@
+#Ukranian
+# based on wikipedia.com, omniglot.com, and Some properties of the Ukranian writing system by Solomija Buk et al.
+# prepared by Alina Korshunova <alinakor2202@gmail.com>
+
+
+::Any-Lower();
+
+[n t d t͡s d͡z s z l r] { я → ʲa;
+[n t d t͡s d͡z s z l r] { є → ʲe;
+[n t d t͡s d͡z s z l r] { і → ʲi;
+[n t d t͡s d͡z s z l r] { ю → ʲu;
+[n t d t͡s d͡z s z l r] { ь → ʲ;
+
+$A = [\u0027 \u02B9 \u02BB \u02BC \u02BD \u2018 \u2019 \u201B];
+$A ? є → je;
+$A ? я → ja;
+$A ? ю → ju;
+$A → ;
+
+дз → d͡z;
+дж → d͡ʒ;
+
+а → a;
+б → b;
+в → ʋ;
+г → ɦ; 
+ґ → ɡ;
+д → d;
+е → e;
+є → je;
+ж → ʒ;
+з → z;
+и → ɪ; 
+і → i;
+ї → ji;
+й → j; 
+к → k;
+л → l;
+м → m;
+н → n;
+о → o;
+п → p;
+р → r;
+с → s;
+т → t;
+у → u;
+ф → f;
+х → x;
+ц → t͡s;
+ч → t͡ʃ;
+ш → ʃ;
+щ → ʃt͡ɕ;
+ь →  ;
+ю → ju;
+я → ja;
+

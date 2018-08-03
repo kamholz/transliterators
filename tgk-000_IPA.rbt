@@ -1,0 +1,49 @@
+# Tajik
+# based on wikipedia.com, omniglot.com, 
+# and Bukharan Tajik by Shinji Ido (Nagoya University) https://www.cambridge.org/core/services/aop-cambridge-core/content/view/E909A0BEDE9E6F52A52FBB12A9255A6F/S002510031300011Xa.pdf/bukharan_tajik.pdf
+# prepared by Alina Korshunova <alinakor2202@gmail.com>
+
+::Any-Lower();
+
+$wordBoundary = [^[:L:][:M:]];
+$wordBoundary { е → je;
+
+а → a;
+б → b;
+в → v;
+г → ɡ;
+ғ → ʁ;
+д → d;
+е → e;
+ё → jo;
+ж → ʒ;
+з → z;
+и → i;
+ӣ → ˈi; 
+й → j;
+к → k;
+қ → q;
+л → l;
+м → m;
+н → n;
+о → ɔ;
+п → p;
+р → r;
+с → s;
+т → t;
+у → u;
+ӯ → ɵ;
+ф → f;
+х → χ;
+ҳ → h;
+ц → ts;
+ч → t͡ʃ;
+ҷ → d͡ʒ;
+ш → ʃ;
+щ → ʃt͡ʃ; 
+ъ → ʔ;
+ы → i;
+ь → ;
+э → ɛ;
+ю → ju;
+я → ja;

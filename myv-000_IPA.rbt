@@ -1,0 +1,54 @@
+# Erzya
+#please check the rules
+#based on https://en.wikipedia.org/wiki/Erzya_language#Phonology 
+# "AN INTRODUCTORY COURSE OF THE ERZYA LANGUAGE" by Niina Aasmäe http://www.murre.ut.ee/arhiiv/naita_pilt.php?materjal=kasikiri&materjal_id=C0154&sari=C&formaat 
+
+::Any-Lower();
+
+[t d {t͡s} s z r l n] { е → ʲe;
+[t d {t͡s} s z r l n] { ё → ʲo;
+[t d {t͡s} s z r l n] { и → ʲi;
+[t d {t͡s} s z r l n] { ю → ʲu;
+[t d {t͡s} s z r l n] { я → ʲa;
+
+$wordBoundary = [^[:L:][:M:]];
+нг } $wordBoundary → nɡ; # At morpheme or word boundaries ŋ is not realized
+нк → ŋk;
+нг → ŋɡ;
+
+o { в → w; #The labiodental consonant v changes, especially after o, into a labial consonant w
+
+
+а → a;
+б → b;
+в → v;
+г → ɡ;
+д → d;
+е → je;
+ё → jo;
+ж → ʒ;
+з → z;
+и → i;
+й → j;
+к → k;
+л → l;
+м → m;
+н → n;
+о → o;
+п → p;
+р → r;
+с → s;
+т → t;
+у → u;
+ф → f;
+х → h;
+ц → t͡s;
+ч → t͡ʃ;
+ш → ʃ;
+щ → ʃt͡ʃ;
+ъ → ;
+ы → ɨ;
+ь → ʲ;
+э → e;
+ю → ju;
+я → ja;

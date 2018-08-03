@@ -1,0 +1,65 @@
+# Abkhaz abk-000 
+# based on https://en.wikipedia.org/wiki/Abkhaz_language
+# http://lingvarium.org/scripts/abkhaz.shtml 
+# and "Abkhaz" by Viacheslav Chirikba http://apsnyteka.org/file/Chirikba_Abkhaz.pdf 
+
+::Any-Lower();
+
+жь → ʒ;
+жә → ʒʷ;
+шь → ʃ;
+шә → ʃʷ;
+ӡә → d͡ʑʷ; 
+ҭә → tʷʰ;
+цә → t͡ɕʷʰ;
+ҵә → t͡ɕʼʷ;
+џь → d͡ʒ;
+
+
+а → a;
+б → b;
+в → v;
+г → ɡ;
+ӷ → ɣ;
+ҕ → ɣ;
+д → d;
+е → a;
+ж → ʐ;
+з → z;
+ӡ → d͡z;
+и → j;
+й → j;
+к → kʼ;
+қ → kʰ;
+ҟ → qʼ;
+л → l;
+м → m;
+н → n;
+о → a;
+п → pʼ;
+ԥ → pʰ;
+ҧ → pʰ;
+р → r;
+с → s;
+т → tʼ;
+ҭ → tʰ;
+у → w;
+ф → f;
+х → x;
+ҳ → ħ;
+ц → t͡sʰ;
+ҵ → t͡sʼ;
+ч → t͡ʃʰ;
+ӌ → t͡ʃʼ;
+ҷ → t͡ʃʼ;
+ҽ → t͡ʂʰ;
+ҿ → t͡ʂʼ;
+ш → ʂ;
+ы → ɨ;
+ҩ → ɥ;
+џ → d͡ʐ;
+ь → ʲ;
+ә → ʷ;
+я → ja;
+
+
