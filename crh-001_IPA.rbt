@@ -1,0 +1,50 @@
+#Crimean Tatar crh-001
+#based on https://en.wikipedia.org/wiki/Crimean_Tatar_language
+#and "Crimean Tatar" by Darya Kavitskaya http://shron1.chtyvo.org.ua/Kavitskaya_Darya/Crimean_Tatar_anhl.pdf
+
+
+::Any-Lower();
+
+гъ → ɣ;
+къ → q;
+нъ → ŋ;
+дж → d͡ʒ;
+
+[p b m s z l k ɡ] { е → ʲe;
+[p b m s z l k ɡ] { и → ʲi;
+[p b m s z l k ɡ] { ю → ʲu;
+[p b m s z l k ɡ] { ё → ʲø;
+
+а → a;
+б → b;
+в → v;
+г → ɡ;
+д → d;
+е → e;
+ё → ø;
+ж → ʒ;
+з → z;
+и → i;
+й → j;
+к → k;
+л → l;
+м → m;
+н → n;
+о → o;
+п → p;
+р → r;
+с → s;
+т → t;
+у → u;
+ф → f;
+х → x;
+ц → t͡s;
+ч → t͡ʃ;
+ш → ʃ;
+щ → ʃt͡ʃ;
+ъ →  ;
+ы → ɯ;
+ь → ʲ;
+э → ɛ;
+ю → y;
+я → ʲa;
