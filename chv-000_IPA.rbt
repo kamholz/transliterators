@@ -1,28 +1,26 @@
 # Chuvash
 # based on wikipedia.org and omniglot.com 
+# "Chuvash Manual" Kruger, John R. 1961
 
 ::Any-Lower();
-
-#Consonants also become palatalized before and after(?) front vowels.
 
 $wordBoundary = [^[:L:][:M:]];
 $wordBoundary { е → je;
 
-$C = [b ʋ g d ʐ z k l m n p r s ɕ t f χ ts t͡ɕ]; 
-$C { е → ʲɛ;
-$C { и → ʲi;
-$C { ю → ʲu;
-$C { я → ʲa;    
+#$C = [b ʋ g d ʐ z k l m n p r s ɕ ʃ t f χ {t͡s} {t͡ʃ}]; 
+#$C { е → ʲɛ;
+#$C { и → ʲi;
+#palatalization is probably not phonemic in Chuvash 
 
 а → a;
-ӑ → ə;
+ӑ → ɔ;
 б → b;
 в → ʋ;
 г → g;
 д → d;
-е → e;
+е → ɛ;
 ё → jo;
-ӗ → ɘ;
+ӗ → œ;
 ж → ʐ;
 з → z;
 и → i;
@@ -42,12 +40,12 @@ $C { я → ʲa;
 ф → f;
 х → χ;
 ц → t͡s;
-ч → t͡ɕ;
-ш → ʂ;
-щ → ɕt͡ɕ;
+ч → t͡ʃ;
+ш → ʃ;
+щ → ʃt͡ʃ;
 ъ → ;
 ы → ɯ;
-ь → ʲ;
-э → e;
+ь → ;
+э → ɛ;
 ю → ju;
 я → ja;
