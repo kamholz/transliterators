@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import sys
+import datetime
 from jinja2 import Template
 import os
 from test_trans import test_trans
@@ -7,7 +8,7 @@ from test_trans import test_trans
 template = r"""
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE supplementalData SYSTEM "../../common/dtd/ldmlSupplemental.dtd">
-<!-- Copyright © 1991-2013 Unicode, Inc.
+<!-- Copyright © 1991-{{year}} Unicode, Inc.
 CLDR data files are interpreted according to the LDML specification (http://unicode.org/reports/tr35/)
 For terms of use, see http://www.unicode.org/copyright.html -->
 <supplementalData>
@@ -40,4 +41,4 @@ if __name__ == "__main__":
         t = Template(template)
         t.globals["alias_fix"] = alias_fix
         t.globals["bare_lang_code"] = bare_lang_code
-        file.write(t.render(lang_code=lang_code, rbt_rules=rbt_rules))
+        file.write(t.render(year=datetime.datetime.now().year, lang_code=lang_code, rbt_rules=rbt_rules))
