@@ -1,7 +1,10 @@
-#Crimean Tatar crh-001
-#based on https://en.wikipedia.org/wiki/Crimean_Tatar_language
-#and "Crimean Tatar" by Darya Kavitskaya http://shron1.chtyvo.org.ua/Kavitskaya_Darya/Crimean_Tatar_anhl.pdf
+# Crimean Tatar 
 
+# based on https://en.wikipedia.org/wiki/Crimean_Tatar_language
+
+# and "Crimean Tatar" by Darya Kavitskaya http://shron1.chtyvo.org.ua/Kavitskaya_Darya/Crimean_Tatar_anhl.pdf
+
+# Originally prepared by Alina Korshunova <alinakor2202@gmail.com> 
 
 ::Any-Lower();
 

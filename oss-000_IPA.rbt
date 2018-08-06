@@ -1,7 +1,8 @@
-#Ossetian
-#based on A Grammar Sketch of Ossetian
-#by Stephen P. Hill and Herbert H. Paper, 1964
-#Originally prepared by Alina Korshunova <alinakor2202@gmail.com>
+# Ossetian
+
+# based on A Grammar Sketch of Ossetian by Stephen P. Hill and Herbert H. Paper, 1964
+
+# Originally prepared by Alina Korshunova <alinakor2202@gmail.com>
 
 ::Any-Lower();
 

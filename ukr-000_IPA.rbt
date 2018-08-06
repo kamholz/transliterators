@@ -1,7 +1,10 @@
-#Ukranian
-# based on wikipedia.com, omniglot.com, and Some properties of the Ukranian writing system by Solomija Buk et al.
-# prepared by Alina Korshunova <alinakor2202@gmail.com>
+# Ukranian
 
+# based on https://en.wikipedia.org/wiki/Ukrainian_language and https://www.omniglot.com/writing/ukrainian.htm
+
+# and "Some properties of the Ukranian writing system" by Solomija Buk et al.
+
+# Originally prepared by Alina Korshunova <alinakor2202@gmail.com> 
 
 ::Any-Lower();
 
@@ -53,4 +56,3 @@ $A → ;
 ь →  ;
 ю → ju;
 я → ja;
-

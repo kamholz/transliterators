@@ -1,7 +1,10 @@
-# digoron oss-001
-#based on A Grammar Sketch of Ossetian by Stephen P. Hill and Herbert H. Paper, 1964
+# Digoron 
+
+# based on A Grammar Sketch of Ossetian by Stephen P. Hill and Herbert H. Paper, 1964
+
 # and Дигорский диалект осетинского языка by М.И.Исаев
-#Originally prepared by Alina Korshunova <alinakor2202@gmail.com>
+
+# Originally prepared by Alina Korshunova <alinakor2202@gmail.com>
 
 ::Any-Lower();
 

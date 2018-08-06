@@ -1,7 +1,12 @@
-# Abkhaz abk-000 
+# Abkhaz 
+
 # based on https://en.wikipedia.org/wiki/Abkhaz_language
+
 # http://lingvarium.org/scripts/abkhaz.shtml 
+
 # and "Abkhaz" by Viacheslav Chirikba http://apsnyteka.org/file/Chirikba_Abkhaz.pdf 
+
+# Originally prepared by Alina Korshunova <alinakor2202@gmail.com> 
 
 ::Any-Lower();
 
@@ -61,5 +66,4 @@
 ь → ʲ;
 ә → ʷ;
 я → ja;
-
-
+ъ → ;

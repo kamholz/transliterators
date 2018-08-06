@@ -1,6 +1,10 @@
 # Chuvash
-# based on wikipedia.org and omniglot.com 
+
+# based on https://en.wikipedia.org/wiki/Chuvash_language#Phonology and https://www.omniglot.com/writing/chuvash.htm 
+
 # "Chuvash Manual" Kruger, John R. 1961
+
+# Originally prepared by Alina Korshunova <alinakor2202@gmail.com> 
 
 ::Any-Lower();
 

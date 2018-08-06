@@ -1,5 +1,13 @@
 # Kalmyk
 
+# based on https://en.wikipedia.org/wiki/Kalmyk_Oirat#Phonology and https://www.omniglot.com/writing/kalmyk.htm
+
+# and "Грамматика Калмыцкого языка" by П. Ц. Биткеев et al.
+
+# and "Oirat Tobi" by Elena Indjieva http://www.ling.hawaii.edu/graduate/Elena%20Indjieva%20Diss%20Draft.pdf 
+
+# Originally prepared by Alina Korshunova <alinakor2202@gmail.com> 
+
 ::Any-Lower();
 
 [p w g t k l m n {pʰ} r {tʰ} x {tsʰ}] { е → ʲɛ;

@@ -1,6 +1,10 @@
-#Abaza abq-000
-#based on https://en.wikipedia.org/wiki/Abaza_language#Phonology
+# Abaza 
+
+# based on https://en.wikipedia.org/wiki/Abaza_language#Phonology
+
 # and "A North West Caucasian Reader" by John Colarusso (McMaster University)
+
+# Originally prepared by Alina Korshunova <alinakor2202@gmail.com> 
 
 :: [[:Cyrillic:]];
 ::Any-Lower();
