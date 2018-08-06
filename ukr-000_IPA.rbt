@@ -6,6 +6,8 @@
 
 # Originally prepared by Alina Korshunova <alinakor2202@gmail.com> 
 
+# as part of her internship at PanLex (panlex.org)
+
 ::Any-Lower();
 
 [n t d t͡s d͡z s z l r] { я → ʲa;

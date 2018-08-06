@@ -8,6 +8,8 @@
 
 # Originally prepared by Alina Korshunova <alinakor2202@gmail.com>
 
+# as part of her internship at PanLex (panlex.org)
+
 ::Any-Lower();
 
 $wordBoundary = [^[:L:][:M:]];
