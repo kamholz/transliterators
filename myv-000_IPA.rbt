@@ -12,12 +12,9 @@
 [t d {t͡s} s z r l n] { я → ʲa;
 
 $wordBoundary = [^[:L:][:M:]];
-нг } $wordBoundary → nɡ; # At morpheme or word boundaries ŋ is not realized
+нг } $wordBoundary → ŋ;
 нк → ŋk;
 нг → ŋɡ;
-
-o { в → w; #The labiodental consonant v changes, especially after o, into a labial consonant w
-
 
 а → a;
 б → b;
