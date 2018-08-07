@@ -53,9 +53,17 @@ color_dict = {
     "Armn": "olive",
 }
 
-def getexprs(uid, include=r"", exclude=r"^$"):
+def getexprs(uid, include=r"", exclude=r"^$", replace=[]):
     r = panlex.query("/expr", {"uid": uid, "include": "expr_score", "sort": "expr_score desc"})
-    return [ex["txt"] for ex in r["result"] if re.search(include, ex["txt"]) and not re.search(exclude, ex["txt"])]
+    exprs = [ex["txt"] for ex in r["result"]]
+    return exprs
+
+def prep_exprs(exprs, include=r"", exclude=r"^$", replace=[]):
+    output = [ex for ex in exprs if re.search(include, ex) and not re.search(exclude, ex)]
+    if replace:
+        for re_from, replacement in replace:
+            output = [re.sub(re_from, replacement, ex) for ex in output]
+    return output
 
 def make_trans(rulefile):
     trans_name = os.path.splitext(os.path.basename(rulefile))[0]
@@ -76,15 +84,17 @@ def get_color(char):
     except KeyError:
         return md5(script.encode("UTF-8")).hexdigest()[-6:]
 
-def test_trans(rulefile, uid, result_filename, with_html=False, include=r"", exclude=r"^$"):
+def test_trans(rulefile, uid, result_filename, with_html=False, include=r"", exclude=r"^$", replace=[]):
     os.makedirs("tests/results/html", exist_ok=True)
     try:
-        exprs = open("tests/" + uid + ".txt").read().split("\n")
+        raw_exprs = open("tests/" + uid + ".txt").read().split("\n")
+        exprs = prep_exprs(raw_exprs, include=include, exclude=exclude, replace=replace)
     except FileNotFoundError:
-        exprs = getexprs(uid, include=include, exclude=exclude)
+        raw_exprs = getexprs(uid)
         with open("tests/" + uid + ".txt", "w") as file:
-            for expr in exprs:
+            for expr in raw_exprs:
                 file.write(expr + "\n")
+        exprs = prep_exprs(raw_exprs, include=include, exclude=exclude, replace=replace)
     t = make_trans(rulefile)
     test_results = [(expr, t.transliterate(expr)) for expr in exprs]
     with open(result_filename, "w") as file:
@@ -100,9 +110,9 @@ if __name__ == "__main__":
     parser.add_argument("uid")
     parser.add_argument("-i", "--include", default=r"")
     parser.add_argument("-e", "--exclude", default=r"^$")
+    parser.add_argument("-r", "--replace", action="append", nargs=2)
     args = parser.parse_args()
-    uid = args.uid
     rulefile = args.rulefile
     os.makedirs("tests/results/html", exist_ok=True)
     result_filename = "tests/results/" + os.path.basename(rulefile) + ".result"
-    test_trans(rulefile, uid, result_filename, with_html=True, include=args.include, exclude=args.exclude)
+    test_trans(rulefile, args.uid, result_filename, with_html=True, include=args.include, exclude=args.exclude, replace=args.replace)

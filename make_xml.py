@@ -37,6 +37,7 @@ if __name__ == "__main__":
     parser.add_argument("uid")
     parser.add_argument("-i", "--include", default=r"")
     parser.add_argument("-e", "--exclude", default=r"^$")
+    parser.add_argument("-r", "--replace", action="append", nargs=2)
     args = parser.parse_args()
     uid = args.uid
     lang_code = args.lang_code
@@ -45,7 +46,7 @@ if __name__ == "__main__":
     xml_filename = directory + "{0}-{0}_FONIPA.xml".format(lang_code)
     rbt_rules = open(args.rulefile).read()
     bcp47 = "{}-fonipa-t-{}".format(bare_lang_code(lang_code), alias_fix(lang_code))
-    test_trans(sys.argv[1], uid, directory + bcp47 + ".txt", include=args.include, exclude=args.exclude)
+    test_trans(sys.argv[1], uid, directory + bcp47 + ".txt", include=args.include, exclude=args.exclude, replace=args.replace)
     with open(xml_filename, "w") as file:
         t = Template(template)
         t.globals["alias_fix"] = alias_fix
