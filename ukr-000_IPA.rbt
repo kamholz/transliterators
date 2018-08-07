@@ -1,11 +1,8 @@
-# Ukranian
-
+# Ukranian to phonemic transcription
 # based on https://en.wikipedia.org/wiki/Ukrainian_language and https://www.omniglot.com/writing/ukrainian.htm
-
 # and "Some properties of the Ukranian writing system" by Solomija Buk et al.
-
+#
 # Originally prepared by Alina Korshunova <alinakor2202@gmail.com> 
-
 # as part of her internship at PanLex (panlex.org)
 
 ::Any-Lower();

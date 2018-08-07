@@ -1,11 +1,8 @@
-# Erzya
-
+# Erzya to phonemic transcription
 # based on https://en.wikipedia.org/wiki/Erzya_language#Phonology 
-
 # "AN INTRODUCTORY COURSE OF THE ERZYA LANGUAGE" by Niina Aasmäe http://www.murre.ut.ee/arhiiv/naita_pilt.php?materjal=kasikiri&materjal_id=C0154&sari=C&formaat 
-
+#
 # Originally prepared by Alina Korshunova <alinakor2202@gmail.com>
-
 # as part of her internship at PanLex (panlex.org)
 
 ::Any-Lower();

@@ -1,11 +1,8 @@
-# Tajik
-
+# Tajik to phonemic transcription
 # based on https://en.wikipedia.org/wiki/Tajik_language and https://www.omniglot.com/writing/tajik.htm  
-
 # and Bukharan Tajik by Shinji Ido (Nagoya University) https://www.cambridge.org/core/services/aop-cambridge-core/content/view/E909A0BEDE9E6F52A52FBB12A9255A6F/S002510031300011Xa.pdf/bukharan_tajik.pdf
-
+#
 # Originally prepared by Alina Korshunova <alinakor2202@gmail.com>
-
 # as part of her internship at PanLex (panlex.org)
 
 ::Any-Lower();

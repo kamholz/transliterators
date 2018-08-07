@@ -1,11 +1,8 @@
-# Moksha
-
+# Moksha to phonemic transcription
 # based on https://en.wikipedia.org/wiki/Moksha_language#Phonology
-
 # and "Основы финно-угорского языкознания" by Лыткин В.И., Майтинская К.Е., Редеи К.
-
+#
 # Originally prepared by Alina Korshunova <alinakor2202@gmail.com> 
-
 # as part of her internship at PanLex (panlex.org)
 
 ::Any-Lower();

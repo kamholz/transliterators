@@ -1,13 +1,9 @@
-# Hill Mari
-
+# Hill Mari to phonemic transcription
 # based on Reading Hill Mari through Meadow Mari, Release 1.0
-
 # by Nadezhda Krasnova, Timothy Riese, Tatiana Yefremova, Jeremy Bradley
-
 # which can be found at mari-language.com
-
+#
 # Originally prepared by Alina Korshunova <alinakor2202@gmail.com>
-
 # as part of her internship at PanLex (panlex.org)
 
 ::Any-Lower();
