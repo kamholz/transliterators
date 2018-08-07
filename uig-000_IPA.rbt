@@ -40,3 +40,27 @@
 ې → e;
 ى → i;
 ي → j; 
+
+# Handle geminated consonants
+::Null;
+bb → bː;
+pp → pː;
+tt } [^\u0361] → tː; # make sure not to consume tt͡ʃ
+d͡ʒd͡ʒ → d͡ʒː;
+t͡ʃt͡ʃ → t͡ʃː;
+xx → xː;
+dd } [^\u0361] → dː; # make sure not to consume dd͡ʒ
+rr → rː;
+zz → zː;
+ʒʒ → ʒː;
+ss → sː;
+ʃʃ → ʃː;
+ʁʁ → ʁː;
+ff → fː;
+qq → qː;
+kk → kː;
+ɡɡ → ɡː;
+ŋŋ → ŋː;
+hh → hː;
+ww → wː;
+jj → jː;
