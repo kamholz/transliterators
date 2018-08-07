@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import sys
 import datetime
+import argparse
 from jinja2 import Template
 import os
 from test_trans import test_trans
@@ -30,14 +31,21 @@ def bare_lang_code(lang_code):
 
 
 if __name__ == "__main__":
-    uid = sys.argv[3]
-    lang_code = sys.argv[2]
+    parser = argparse.ArgumentParser()
+    parser.add_argument("rulefile")
+    parser.add_argument("lang_code")
+    parser.add_argument("uid")
+    parser.add_argument("-i", "--include", default=r"")
+    parser.add_argument("-e", "--exclude", default=r"^$")
+    args = parser.parse_args()
+    uid = args.uid
+    lang_code = args.lang_code
     directory = "output/" + lang_code + "/"
     os.makedirs(directory, exist_ok=True)
     xml_filename = directory + "{0}-{0}_FONIPA.xml".format(lang_code)
-    rbt_rules = open(sys.argv[1]).read()
+    rbt_rules = open(args.rulefile).read()
     bcp47 = "{}-fonipa-t-{}".format(bare_lang_code(lang_code), alias_fix(lang_code))
-    test_trans(sys.argv[1], uid, directory + bcp47 + ".txt")
+    test_trans(sys.argv[1], uid, directory + bcp47 + ".txt", include=args.include, exclude=args.exclude)
     with open(xml_filename, "w") as file:
         t = Template(template)
         t.globals["alias_fix"] = alias_fix
