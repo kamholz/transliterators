@@ -1,0 +1,20 @@
+# a with breve
+\u0103	\u04d1
+\u0102	\u04d0
+# e with breve/caron
+[\u0115\u011b]	\u04d7
+[\u0114\u011a]	\u04d6
+# c with cedilla
+\u00e7	\u04ab
+\u00c7	\u04aa
+# y with umlaut
+\u00ff	\u04f3
+\u0178	\u04f2
+
+e	е
+
+c	с
+
+a	а
+
+^1.	

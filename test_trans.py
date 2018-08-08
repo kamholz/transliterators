@@ -104,15 +104,42 @@ def test_trans(rulefile, uid, result_filename, with_html=False, include=r"", exc
         with open("tests/results/html/" + os.path.basename(result_filename) + ".html", "w") as file:
             file.write(gen_webpage(test_results))
 
+def extract_replacements(replace_file):
+    with open(replace_file) as file:
+        lines = [line for line in file.readlines() if line.strip() and not line.startswith("#")]
+        return [line.split("\t") for line in lines if line.split("\t")]
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("rulefile")
     parser.add_argument("uid")
-    parser.add_argument("-i", "--include", default=r"")
-    parser.add_argument("-e", "--exclude", default=r"^$")
-    parser.add_argument("-r", "--replace", action="append", nargs=2)
+    parser.add_argument("-i", "--include")
+    parser.add_argument("-e", "--exclude")
+    parser.add_argument("-r", "--replace")
     args = parser.parse_args()
     rulefile = args.rulefile
+    uid = args.uid
+    if args.include:
+        include = open(args.include).read().strip()
+    else:
+        try:
+            include = open("test_data_fixes/{}_include".format(uid)).read().strip()
+        except FileNotFoundError:
+            include = r""
+    if args.exclude:
+        exclude = open(args.exclude).read().strip()
+    else:
+        try:
+            exclude = open("test_data_fixes/{}_exclude".format(uid)).read().strip()
+        except FileNotFoundError:
+            exclude = r"^$"
+    if args.replace:
+        replace = extract_replacements(args.replace)
+    else:
+        try:
+            replace = extract_replacements("test_data_fixes/{}_replace".format(uid))
+        except FileNotFoundError:
+            replace = []
     os.makedirs("tests/results/html", exist_ok=True)
     result_filename = "tests/results/" + os.path.basename(rulefile) + ".result"
-    test_trans(rulefile, args.uid, result_filename, with_html=True, include=args.include, exclude=args.exclude, replace=args.replace)
+    test_trans(rulefile, uid, result_filename, with_html=True, include=include, exclude=exclude, replace=replace)
