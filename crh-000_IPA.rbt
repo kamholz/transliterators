@@ -7,10 +7,11 @@
 
 ::Any-Lower();
 
-[p b m s z l k ɡ] { e → ʲe;
-[p b m s z l k ɡ] { i → ʲi;
-[p b m s z l k ɡ] { y → ʲu;
-[p b m s z l k ɡ] { ö → ʲø;
+#palatalization is allophonic in all dialects of Crimean Tatar 
+#[p b m s z l k ɡ] { e → ʲe;
+#[p b m s z l k ɡ] { i → ʲi;
+#[p b m s z l k ɡ] { y → ʲu;
+#[p b m s z l k ɡ] { ö → ʲø;
 
 a → a;
 â → ʲa;
