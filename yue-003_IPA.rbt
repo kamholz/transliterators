@@ -1,0 +1,42 @@
+# Cantonese (Jyutping Romanization) to phonemic transcription
+# based on https://en.wikipedia.org/wiki/Jyutping
+#
+# Originally prepared by Ben Yang <yang@panlex.org>
+# for PanLex (panlex.org)
+
+::[:Latin:]lower();
+$vowel = [aɐɛeiɔouœɵyː];
+'' ← \u0329; # syllabic
+| ng ↔ | ŋ;
+[^$vowel] { ([mŋ]) } [^$vowel] → $1\u0329; # syllabic
+oe ↔ œː;
+eo ↔ ɵ;
+aa ↔ aː;
+yu ↔ yː;
+a ↔ ɐ;
+e } [^i] ↔ ɛː;
+[{ɔː}{uː}ɵ] { i ↔ $vowel { y;
+i } [{ng}ŋk] ↔ e } [ŋk];
+[^$vowel] { i ↔ iː;
+o } [^u] ↔ ɔː;
+u } [{ng}ŋk] ↔ o } [ŋk];
+[^$vowel] { u ↔ uː;
+gw ↔ kʷ;
+kw ↔ kʰʷ;
+p } [^1-9] ↔ pʰ;
+b ↔ p } $vowel;
+t } [^1-9] ↔ tʰ;
+d ↔ t } $vowel;
+k } [^1-9] ↔ kʰ;
+g ↔ k } $vowel;
+c ↔ tsʰ;
+z ↔ ts;
+2 ↔ ˧˥;
+4 ↔ ˨˩;
+5 ↔ ˩˧;
+1 ↔ ˥;
+7 → ˥;
+3 ↔ ˧;
+8 → ˧;
+6 ↔ ˨;
+9 → ˨;

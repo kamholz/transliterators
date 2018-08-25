@@ -65,9 +65,10 @@ def prep_exprs(exprs, include=r"", exclude=r"^$", replace=[]):
             output = [re.sub(re_from, replacement, ex) for ex in output]
     return output
 
-def make_trans(rulefile):
+def make_trans(rulefile, reverse=False):
     trans_name = os.path.splitext(os.path.basename(rulefile))[0]
-    return icu.Transliterator.createFromRules(trans_name, open(rulefile).read(), icu.UTransDirection.FORWARD)
+    direction = icu.UTransDirection.REVERSE if reverse else icu.UTransDirection.FORWARD
+    return icu.Transliterator.createFromRules(trans_name, open(rulefile).read(), direction)
 
 def gen_webpage(test_results):
     t = Template(template)
@@ -84,7 +85,7 @@ def get_color(char):
     except KeyError:
         return md5(script.encode("UTF-8")).hexdigest()[-6:]
 
-def test_trans(rulefile, uid, result_filename, with_html=False, include=r"", exclude=r"^$", replace=[]):
+def test_trans(rulefile, uid, result_filename, with_html=False, include=r"", exclude=r"^$", replace=[], reverse=False):
     os.makedirs("tests/results/html", exist_ok=True)
     try:
         raw_exprs = open("tests/" + uid + ".txt").read().split("\n")
@@ -95,7 +96,7 @@ def test_trans(rulefile, uid, result_filename, with_html=False, include=r"", exc
             for expr in raw_exprs:
                 file.write(expr + "\n")
         exprs = prep_exprs(raw_exprs, include=include, exclude=exclude, replace=replace)
-    t = make_trans(rulefile)
+    t = make_trans(rulefile, reverse)
     test_results = [(expr, t.transliterate(expr)) for expr in exprs]
     with open(result_filename, "w") as file:
         for ex_r in test_results:
@@ -116,6 +117,7 @@ if __name__ == "__main__":
     parser.add_argument("-i", "--include")
     parser.add_argument("-e", "--exclude")
     parser.add_argument("-r", "--replace")
+    parser.add_argument("--reverse", action="store_true")
     args = parser.parse_args()
     rulefile = args.rulefile
     uid = args.uid
@@ -142,4 +144,4 @@ if __name__ == "__main__":
             replace = []
     os.makedirs("tests/results/html", exist_ok=True)
     result_filename = "tests/results/" + os.path.basename(rulefile) + ".result"
-    test_trans(rulefile, uid, result_filename, with_html=True, include=include, exclude=exclude, replace=replace)
+    test_trans(rulefile, uid, result_filename, with_html=True, include=include, exclude=exclude, replace=replace, reverse=args.reverse)

@@ -1,0 +1,41 @@
+# Cantonese (Yale Romanization Numbers) to Cantonese (Yale Romanization Accents)
+# based on https://en.wikipedia.org/wiki/Yale_romanization_of_Cantonese
+#
+# Originally prepared by Ben Yang <yang@panlex.org>
+# for PanLex (panlex.org)
+
+# FIXME: BROKEN IF SYLLABLES AREN'T SPACED
+
+:: NFD (NFC);
+
+$vowel = [aeiou];
+$coda = [iumn{ng}ptk];
+
+($vowel) ($vowel*) ($coda?) 1 → $1\u0304$2$3; #combining macron
+($vowel) ($vowel*) ($coda?) 2 → $1\u0301$2$3; #combining acute
+3 → ;
+($vowel) ($vowel*) ($coda?) 4 → $1\u0300$2h$3; #combining grave
+($vowel) ($vowel*) ($coda?) 5 → $1\u0301$2h$3; #combining acute
+($vowel+) ($coda?) 6 → $1h$2;
+
+([mn])(g?) 1 → $1\u0304$2;
+([mn])(g?) 2 → $1\u0301$2;
+([mn])(g?) 4 → $1\u0300$2h;
+([mn])(g?) 5 → $1\u0301$2h;
+([mn]g?) 6 → $1h;
+
+$1$2$3 4 ← ($vowel)\u0300($vowel*)h($coda?);
+$1$2$3 5 ← ($vowel)\u0301($vowel*)h($coda?);
+$1$2$3 6 ← ($vowel)($vowel*)h($coda?);
+$1$2 1 ← ($vowel)\u0304($vowel*$coda?);
+$1$2 2 ← ($vowel)\u0301($vowel*$coda?);
+$1 3 ← ($vowel+ $coda?);
+
+$1$2 4 ← ([mn])\u0300 (g?) h;
+$1$2 5 ← ([mn])\u0301 (g?) h;
+$1 6 ← ([m{ng}]) h;
+$1$2 1 ← ([mn])\u0304(g?);
+$1$2 2 ← ([mn])\u0301(g?);
+$1 3 ← ([m{ng}]);
+
+:: NFC (NFD);
