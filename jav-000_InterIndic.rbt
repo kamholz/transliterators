@@ -1,0 +1,60 @@
+:: NFC;
+
+$vowel=[aéèêēioōu];
+$capvowel=[AÉÈÊIOU];
+$consonant=[bcdfghjklmnprstwy{ḍ}{ñ}{ṅ}{ṭ}{ṇ}{ś}{ṟ}];
+$wordboundary=[^[:L:][:M:]];
+
+# "ha" is the usual vowel carrier, interpret capital vowels as swara
+[$wordboundary $vowel] { ($vowel) → h $1;
+[$vowel $capvowel] { ($capvowel) → '' $1;
+::[AÉÈÊIOU] lower;
+
+## try to figure out which "e"s are pepet, which are taling
+# if "é" or "è" in string, assume remaining "e"s are pepet
+e } [^éè]* [éè] → ê;
+[éè] [^éè]* { e → ê;
+::Null;
+# if "ê" or "ě" in string, assume remaining "e"s are taling
+e } [^êě]* [êě] → é;
+[êě] [^êě]* { e → é;
+::Null;
+# pepet does not occur at the end of a word, all word-final "e" is taling
+[eêě] } $wordboundary → | é;
+# if no other hints, assume all "e" is pepet (as pepet is more common than taling)
+e → | ê;
+
+
+h } [$wordboundary $consonant] → ḥ;
+ng } [$wordboundary $consonant] → ṁ;
+dh → ḍ;
+ny → ñ;
+ng → ṅ;
+th → ṭ;
+
+n } [cCj] → ñ; # "n" before "c" or "j" interpreted as "ny"
+
+[éè] → ē;
+[êě] → ĕ;
+o → ō;
+
+# assume capital letters should be aksara murda
+K → kh;
+G → gh;
+C → ch;
+NY → ṉ; # using this to represent nya murda
+T → th;
+N → ṇ;
+P → ph;
+B → bh;
+S → ś;
+R → ṟ; # using this to represent ra agung
+::lower;
+
+rĕ → r̥;
+lĕ → l̥;
+
+# block automatic anusvara
+([m{ṅ}{ṇ}{ñ}{ṉ}n]) } $consonant → $1'';
+
+::Latin-InterIndic;
