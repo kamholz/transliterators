@@ -1,0 +1,108 @@
+%%nomer:
+1: siji;
+2: loro;
+3: telu;
+4: papat;
+5: lima;
+6: enem;
+7: pitu;
+8: wolu;
+9: sanga;
+
+%%nomer-cekak:
+1: se;
+2: ro;
+3: =%%nomer=;
+4: pat;
+5: =%%nomer=;
+6: nem;
+7: =%%nomer=;
+
+%nomer-ng:
+1: =%%nomer-cekak=;
+2: =%%nomer-cekak=ng;
+4: patang;
+5: =%%nomer-cekak=ng;
+6: =%%nomer-cekak=;
+7: =%%nomer-cekak=ng;
+
+%spellout-numbering:
+0: =%spellout-cardinal=;
+
+%spellout-cardinal:
+x.x: << koma >>;
+-x: negatif >>;
+0: das;
+1: =%%nomer=;
+10: sepuluh;
+11: sewelas;
+12: >%%nomer-cekak>las;
+14: >%%nomer-cekak>belas;
+15: >%%nomer-cekak>las;
+16: >%%nomer-cekak>belas;
+17: >%%nomer-cekak>las;
+20: <%nomer-ng< puluh;
+21: >%%nomer-cekak>likur;
+25: selawé;
+26: >%%nomer-cekak>likur;
+30: <%nomer-ng< puluh[ >>];
+50: sèket[ >>];
+60: sewidak[ >>];
+70: <%nomer-ng< puluh[ >>];
+100: satus[ >>];
+200: <%nomer-ng< atus[ >>];
+1000: sèwu[ >>];
+2000: <%nomer-ng< èwu[ >>];
+10000/1000: << èwu[ >>];
+1000000: sayuta[ >>];
+2000000: <%nomer-ng< yuta[ >>];
+10000000/1000000: << yuta[ >>];
+1000000000: samilyar[ >>];
+2000000000: <%nomer-ng< milyar[ >>];
+10000000000/1000000000: << milyar[ >>];
+1000000000000: =#,##0=;
+
+%%nomer-krama:
+1: setunggal;
+2: kalih;
+3: tiga;
+4: sekawan;
+5: gangsal;
+6: =%%nomer=;
+
+%%nomer-cekak-krama:
+1: =%%nomer-krama=;
+4: kawan;
+5: =%%nomer-krama=;
+
+%%nomer-krama-ng:
+1: =%%nomer-cekak-krama=;
+3: tigang;
+4: =%%nomer-cekak-krama=;
+6: =%nomer-ng=;
+
+%spellout-cardinal-krama:
+x.x: << koma >>;
+0: das;
+1: =%%nomer-krama=;
+10: sedasa;
+11: =%spellout-cardinal=;
+12: >%%nomer-cekak-krama>welas;
+16: =%spellout-cardinal=;
+20: <%%nomer-krama-ng< dasa;
+21: =%spellout-cardinal=;
+22: >%%nomer-cekak-krama>likur;
+25: selangkung;
+26: =%spellout-cardinal=;
+30: <%%nomer-krama-ng< dasa[ >>];
+50: sèket[ >>];
+60: sewidak[ >>];
+70: <%%nomer-krama-ng< dasa[ >>];
+100: <%%nomer-krama-ng< atus[ >>];
+1000: <%%nomer-krama-ng< èwu[ >>];
+10000/1000: << èwu[ >>];
+1000000: <%%nomer-krama-ng< yuta[ >>];
+10000000/1000000: << yuta[ >>];
+1000000000: <%%nomer-krama-ng< milyar[ >>];
+10000000000/1000000000: << milyar[ >>];
+1000000000000: =#,##0=;
