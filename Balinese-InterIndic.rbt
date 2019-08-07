@@ -1,7 +1,7 @@
 ::NFC;
 
 ᬒᬁ → \uE050; # OM
-ᬀ → \uE001; # SIGN ULU RICEM
+#ᬀ → \uE001; # SIGN ULU RICEM
 ᬁ → \uE001; # SIGN ULU CANDRA
 ᬂ → \uE002; # SIGN CECEK
 ᬃ → \uE030\uE04D; # SIGN SURANG

@@ -1,6 +1,7 @@
 #\u0E00 reserved
 #consonants
 $chandrabindu=\uE001;
+$ardhachandra=\u1B00;
 $anusvara=\uE002;
 $visarga=\uE003;
 #\u0E004 reserved
@@ -441,8 +442,8 @@ $wso → o;
 $om → om;
 #stress marks
 $avagraha → ;
-$chandrabindu$anusvara→ mng;
-$chandrabindu → m;
+$chandrabindu → ng;
+$ardhachandra → m;
 $visarga→h;
 #numbers
 $zero  → 0;
