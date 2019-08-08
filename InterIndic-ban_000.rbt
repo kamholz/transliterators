@@ -490,3 +490,5 @@ $doubleDanda→'.';
 \uE07F→;       # URA
 \uE080→;       # EK ONKAR
 \uE004→;       # DEVANAGARI VOWEL SIGN SHORT A
+
+::NFC;
