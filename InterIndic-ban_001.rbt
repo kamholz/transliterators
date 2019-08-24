@@ -128,11 +128,23 @@ $z=[bcdfghjklmnpqrstvwxyz];
 $vowels=[aeiour̥̄̆];
 $forceIndependentMatra = [^[[:L:][̀-͌]]];
 $strike=\u0336;
+
+######################################################################
+# normalize input
+######################################################################
+
+# delete zwnj
+\u200C→;
+# reprocess from beginning
+::Null;
+
 ######################################################################
 # convert from Native letters to Latin letters
 ######################################################################
+
 #transliterations for anusvara
 $anusvara→ ng;
+
 # Urdu compatibility
 $ya$nukta}$x        → y;
 $ya$nukta$virama    → y;
@@ -191,8 +203,9 @@ $ela                → la;
 $uya}$x             → y;
 $uya$virama         → y;
 $uya                → ya;
+
 # normal consonants
-#$ka$virama}$ha→k'';
+$ka$virama}$ha→k'';
 $ka}$x→k;
 $ka$virama→k;
 $ka→ka;
@@ -200,7 +213,7 @@ $kha$i$u→k $strike h $strike;
 $kha}$x→kh;
 $kha$virama→kh;
 $kha→kha;
-#$ga$virama}$ha→g'';
+$ga$virama}$ha→g'';
 $ga}$x→g;
 $ga$virama→g;
 $ga→ga;
@@ -212,7 +225,7 @@ $nga$i$u→n $strike g $strike;
 $nga}$x→ng;
 $nga$virama→ng;
 $nga→nga;
-#$ca$virama}$ha→c'';
+$ca$virama}$ha→c'';
 $ca}$x→c;
 $ca$virama→c;
 $ca→ca;
@@ -220,7 +233,7 @@ $cha$i$u→c $strike h $strike;
 $cha}$x→ch;
 $cha$virama→ch;
 $cha→cha;
-#$ja$virama}$ha→j'';
+$ja$virama}$ha→j'';
 $ja}$x→j;
 $ja$virama→j;
 $ja→ja;
@@ -232,7 +245,7 @@ $nya }$x→ñ;
 #$nya$virama }[$ca$cha$ja$jha$nya]→n;
 $nya$virama→ñ;
 $nya → ña;
-#$tta$virama}$ha→t'';
+$tta$virama}$ha→ṭ'';
 $tta}$x→ṭ;
 $tta$virama→ṭ;
 $tta→ṭa;
@@ -240,7 +253,7 @@ $ttha$i$u→ṭ $strike h $strike;
 $ttha}$x→ṭh;
 $ttha$virama→ṭh;
 $ttha→ṭha;
-#$dda}$x$ha→d'';
+$dda}$x$ha→ḍ'';
 $dda}$x→ḍ;
 $dda$virama→ḍ;
 $dda→ḍa;
@@ -251,7 +264,7 @@ $ddha→ḍha;
 $nna}$x→ṇ;
 $nna$virama→ṇ;
 $nna→ṇa;
-#$ta$virama}$ha→t'';
+$ta$virama}$ha→t'';
 #$ta$virama}$ttha→t'';
 #$ta$virama}$tta→t'';
 #$ta$virama}$tha→t'';
@@ -262,7 +275,7 @@ $tha$i$u→t $strike h $strike;
 $tha}$x→th;
 $tha$virama→th;
 $tha→tha;
-#$da$virama}$ha→d'';
+$da$virama}$ha→d'';
 #$da$virama}$ddha→d'';
 #$da$virama}$dda→d'';
 #$da$virama}$dha→d'';
@@ -278,7 +291,7 @@ $na$virama}$ga→n'';
 $na}$x→n;
 $na$virama→n;
 $na→na;
-#$pa$virama}$ha→p'';
+$pa$virama}$ha→p'';
 $pa}$x→p;
 $pa$virama→p;
 $pa→pa;
@@ -286,7 +299,7 @@ $pha$i$u→p $strike h $strike;
 $pha}$x→ph;
 $pha$virama→ph;
 $pha→pha;
-#$ba$virama}$ha→b'';
+$ba$virama}$ha→b'';
 $ba}$x→b;
 $ba$virama→b;
 $ba→ba;
@@ -344,6 +357,7 @@ $ssa→ṣa;
 $ha}$x→h;
 $ha$virama→h;
 $ha→ha;
+
 # dependent vowels (should never occur except following consonants)
 $forceIndependentMatra{$aa  → ̔ā;
 $forceIndependentMatra{$ai  → ̔ai;
@@ -384,6 +398,7 @@ $ce  → ĕ;
 $co  → ö;
 $se  → ĕ;
 $so  → o;
+
 #dependent vowels when following independent vowels. Generally Illegal only for roundtripping
 $waa} $x → ā;
 $wai} $x → ai;
@@ -405,6 +420,7 @@ $wco} $x → ö;
 $wse} $x → ĕ;
 $wso} $x → o;
 $om} $x → ōm;
+
 # independent vowels when preceeded by vowels
 $vowels{$waa  → ''ā;
 $vowels{$wai  → ''ai;
@@ -426,6 +442,7 @@ $vowels{$wco  → ''ö;
 $vowels{$wse  → ''ĕ;
 $vowels{$wso  → ''o;
 $vowels{$om  → ''ōm;
+
 # independent vowels (otherwise)
 $waa → ā;
 $wai → ai;
@@ -447,12 +464,14 @@ $wco → ö;
 $wse → ĕ;
 $wso → o;
 $om → ōm;
-#stress marks
+
+# stress marks
 $avagraha → ;
 $chandrabindu → ng;
 $ardhachandra → m;
 $visarga → h;
-#numbers
+
+# numbers
 $zero  → 0;
 $one   → 1;
 $two   → 2;
