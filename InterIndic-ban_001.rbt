@@ -142,8 +142,14 @@ $strike=\u0336;
 # convert from Native letters to Latin letters
 ######################################################################
 
-#transliterations for anusvara
-$anusvara→ ng;
+#glottal stop
+$wa$virama → ḱ;
+
+#anusvara
+$anusvara → ṇg;
+
+#surang
+ᬃ → ṛ;
 
 # Urdu compatibility
 $ya$nukta}$x        → y;
@@ -366,10 +372,10 @@ $forceIndependentMatra{$ii  → ̔ī;
 $forceIndependentMatra{$i   → ̔i;
 $forceIndependentMatra{$uu  → ̔ū;
 $forceIndependentMatra{$u   → ̔u;
-$forceIndependentMatra{$rrh → ̔rö;
-$forceIndependentMatra{$rh  → ̔rĕ;
-$forceIndependentMatra{$llh → ̔lö;
-$forceIndependentMatra{$lh  → ̔lĕ;
+$forceIndependentMatra{$rrh → ̔ṛö;
+$forceIndependentMatra{$rh  → ̔ṛĕ;
+$forceIndependentMatra{$llh → ̔ḷö;
+$forceIndependentMatra{$lh  → ̔ḷĕ;
 $forceIndependentMatra{$e   → ̔e;
 $forceIndependentMatra{$o   → ̔o;
 #extra vowels
@@ -387,10 +393,10 @@ $ii  → ī;
 $i   → i;
 $uu  → ū;
 $u   → u;
-$rrh → rö;
-$rh  → rĕ;
-$llh → lö;
-$lh  → lĕ;
+$rrh → ṛö;
+$rh  → ṛĕ;
+$llh → ḷö;
+$lh  → ḷĕ;
 $e   → e;
 $o   → o;
 #extra vowels
@@ -407,10 +413,10 @@ $wii} $x → ī;
 $wi } $x → i;
 $wuu} $x → ū;
 $wu } $x → u;
-$wrr} $x → rö;
-$wr } $x → rĕ;
-$wll} $x → lö;
-$wl } $x → lĕ;
+$wrr} $x → ṛö;
+$wr } $x → ṛĕ;
+$wll} $x → ḷö;
+$wl } $x → ḷĕ;
 $we } $x → e;
 $wo } $x → o;
 $wa } $x → a;
@@ -419,7 +425,7 @@ $wce} $x → ĕ;
 $wco} $x → ö;
 $wse} $x → ĕ;
 $wso} $x → o;
-$om} $x → ōm;
+$om} $x → oṁ;
 
 # independent vowels when preceeded by vowels
 $vowels{$waa  → ''ā;
@@ -429,10 +435,10 @@ $vowels{$wii  → ''ī;
 $vowels{$wi   → ''i;
 $vowels{$wuu  → ''ū;
 $vowels{$wu   → ''u;
-#$vowels{$wrr  → ''rö;
-#$vowels{$wr   → ''rĕ;
-#$vowels{$wll  → ''lö;
-#$vowels{$wl   → ''lĕ;
+#$vowels{$wrr  → ''ṛö;
+#$vowels{$wr   → ''ṛĕ;
+#$vowels{$wll  → ''ḷö;
+#$vowels{$wl   → ''ḷĕ;
 $vowels{$we   → ''e;
 $vowels{$wo   → ''o;
 $vowels{$wa   → ''a;
@@ -441,7 +447,7 @@ $vowels{$wce  → ''ĕ;
 $vowels{$wco  → ''ö;
 $vowels{$wse  → ''ĕ;
 $vowels{$wso  → ''o;
-$vowels{$om  → ''ōm;
+$vowels{$om  → ''oṁ;
 
 # independent vowels (otherwise)
 $waa → ā;
@@ -451,10 +457,10 @@ $wii → ī;
 $wi  → i;
 $wuu → ū;
 $wu  → u;
-$wrr → rö;
-$wr  → rĕ;
-$wll → lö;
-$wl  → lĕ;
+$wrr → ṛö;
+$wr  → ṛĕ;
+$wll → ḷö;
+$wl  → ḷĕ;
 $we  → e;
 $wo  → o;
 $wa  → a;
@@ -463,13 +469,13 @@ $wce → ĕ;
 $wco → ö;
 $wse → ĕ;
 $wso → o;
-$om → ōm;
+$om → oṁ;
 
 # stress marks
 $avagraha → ;
-$chandrabindu → ng;
-$ardhachandra → m;
-$visarga → h;
+$chandrabindu → ṅġ;
+$ardhachandra → ṃ;
+$visarga → ḥ;
 
 # numbers
 $zero  → 0;
@@ -492,6 +498,7 @@ $danda } [$zero$one$two$three$four$five$six$seven$eight$nine] →;
 [0123456789] { $danda →;
 $danda→', ';
 $doubleDanda→'. ';
+
 \uE070→;       # ABBREVIATION SIGN
 # LETTER RA WITH MIDDLE DIAGONAL
 \uE071}$x→ra;

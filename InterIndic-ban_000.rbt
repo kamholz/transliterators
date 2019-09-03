@@ -130,7 +130,8 @@ $forceIndependentMatra = [^[[:L:][̀-͌]]];
 ######################################################################
 # convert from Native letters to Latin letters
 ######################################################################
-#transliterations for anusvara
+
+#anusvara
 $anusvara} [$ka$kha$ga$gha$nga]             → ng;
 $anusvara} [$ca$cha$ja$jha$nya]             → n;
 $anusvara} [$tta$ttha$dda$ddha$nna]         → n;
@@ -138,6 +139,10 @@ $anusvara} [$ta$tha$da$dha$na]              → n;
 $anusvara} [$pa$pha$ba$bha$ma]              → m;
 $anusvara} [$ya$ra$lla$la$va$ssa$sha$sa$ha] → n;
 $anusvara→ ng;
+
+#surang
+ᬃ → r;
+
 # Urdu compatibility
 $ya$nukta}$x        → y;
 $ya$nukta$virama    → y;
@@ -196,6 +201,7 @@ $ela                → la;
 $uya}$x             → y;
 $uya$virama         → y;
 $uya                → ya;
+
 # normal consonants
 #$ka$virama}$ha→k'';
 $ka}$x→k;
@@ -324,6 +330,7 @@ $va→wa;
 #$sa$virama}$sa→s'';
 $sa}$x→s;
 $sa$virama→s;
+
 #for gurmukhi
 $sa$nukta}$x→sy;
 $sa$nukta$virama→sy;
@@ -338,6 +345,7 @@ $ssa→sya;
 $ha}$x→h;
 $ha$virama→h;
 $ha→ha;
+
 # dependent vowels (should never occur except following consonants)
 $forceIndependentMatra{$aa  → ̔ā;
 $forceIndependentMatra{$ai  → ̔ai;
@@ -377,6 +385,7 @@ $ce  → e;
 $co  → ē;
 $se  → e;
 $so  → o;
+
 #dependent vowels when following independent vowels. Generally Illegal only for roundtripping
 $waa} $x → ā;
 $wai} $x → ai;
@@ -398,6 +407,7 @@ $wco} $x → ē;
 $wse} $x → e;
 $wso} $x → o;
 $om} $x → om;
+
 # independent vowels when preceeded by vowels
 $vowels{$waa  → ''ā;
 $vowels{$wai  → ''ai;
@@ -419,6 +429,7 @@ $vowels{$wco  → ''ē;
 $vowels{$wse  → ''e;
 $vowels{$wso  → ''o;
 $vowels{$om  → ''om;
+
 # independent vowels (otherwise)
 $waa → ā;
 $wai → ai;
@@ -440,11 +451,13 @@ $wco → ē;
 $wse → e;
 $wso → o;
 $om → om;
+
 #stress marks
 $avagraha → ;
 $chandrabindu → ng;
 $ardhachandra → m;
-$visarga→h;
+$visarga → h;
+
 #numbers
 $zero  → 0;
 $one   → 1;
@@ -466,6 +479,7 @@ $danda } [$zero$one$two$three$four$five$six$seven$eight$nine] →;
 [0123456789] { $danda →;
 $danda→',';
 $doubleDanda→'.';
+
 \uE070→;       # ABBREVIATION SIGN
 # LETTER RA WITH MIDDLE DIAGONAL
 \uE071}$x→ra;
