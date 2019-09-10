@@ -143,13 +143,13 @@ $strike=\u0336;
 ######################################################################
 
 #glottal stop
-$wa$virama → ḱ;
+$wa$virama → k'';
 
 #anusvara
-$anusvara → ṇg;
+$anusvara → n̅g̅;
 
 #surang
-ᬃ → ṛ;
+ᬃ → r̀;
 
 # Urdu compatibility
 $ya$nukta}$x        → y;
@@ -372,10 +372,10 @@ $forceIndependentMatra{$ii  → ̔ī;
 $forceIndependentMatra{$i   → ̔i;
 $forceIndependentMatra{$uu  → ̔ū;
 $forceIndependentMatra{$u   → ̔u;
-$forceIndependentMatra{$rrh → ̔ṛö;
-$forceIndependentMatra{$rh  → ̔ṛĕ;
-$forceIndependentMatra{$llh → ̔ḷö;
-$forceIndependentMatra{$lh  → ̔ḷĕ;
+$forceIndependentMatra{$rrh → ̔r̥ö;
+$forceIndependentMatra{$rh  → ̔r̥ĕ;
+$forceIndependentMatra{$llh → ̔l̥ö;
+$forceIndependentMatra{$lh  → ̔l̥ĕ;
 $forceIndependentMatra{$e   → ̔e;
 $forceIndependentMatra{$o   → ̔o;
 #extra vowels
@@ -393,10 +393,10 @@ $ii  → ī;
 $i   → i;
 $uu  → ū;
 $u   → u;
-$rrh → ṛö;
-$rh  → ṛĕ;
-$llh → ḷö;
-$lh  → ḷĕ;
+$rrh → r̥ö;
+$rh  → r̥ĕ;
+$llh → l̥ö;
+$lh  → l̥ĕ;
 $e   → e;
 $o   → o;
 #extra vowels
@@ -413,10 +413,10 @@ $wii} $x → ī;
 $wi } $x → i;
 $wuu} $x → ū;
 $wu } $x → u;
-$wrr} $x → ṛö;
-$wr } $x → ṛĕ;
-$wll} $x → ḷö;
-$wl } $x → ḷĕ;
+$wrr} $x → r̥ö;
+$wr } $x → r̥ĕ;
+$wll} $x → l̥ö;
+$wl } $x → l̥ĕ;
 $we } $x → e;
 $wo } $x → o;
 $wa } $x → a;
@@ -435,10 +435,10 @@ $vowels{$wii  → ''ī;
 $vowels{$wi   → ''i;
 $vowels{$wuu  → ''ū;
 $vowels{$wu   → ''u;
-#$vowels{$wrr  → ''ṛö;
-#$vowels{$wr   → ''ṛĕ;
-#$vowels{$wll  → ''ḷö;
-#$vowels{$wl   → ''ḷĕ;
+#$vowels{$wrr  → ''r̥ö;
+#$vowels{$wr   → ''r̥ĕ;
+#$vowels{$wll  → ''l̥ö;
+#$vowels{$wl   → ''l̥ĕ;
 $vowels{$we   → ''e;
 $vowels{$wo   → ''o;
 $vowels{$wa   → ''a;
@@ -457,10 +457,10 @@ $wii → ī;
 $wi  → i;
 $wuu → ū;
 $wu  → u;
-$wrr → ṛö;
-$wr  → ṛĕ;
-$wll → ḷö;
-$wl  → ḷĕ;
+$wrr → r̥ö;
+$wr  → r̥ĕ;
+$wll → l̥ö;
+$wl  → l̥ĕ;
 $we  → e;
 $wo  → o;
 $wa  → a;
