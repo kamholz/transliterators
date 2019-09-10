@@ -494,8 +494,8 @@ $aulm →;
 $dgs→'';
 $kta→t;
 # Balinese numbers are surrounded by dandas which can be removed
-$danda } [$zero$one$two$three$four$five$six$seven$eight$nine] →;
-[0123456789] { $danda →;
+$danda } [$zero$one$two$three$four$five$six$seven$eight$nine] → ' ';
+[0123456789] { $danda → ' ';
 $danda→', ';
 $doubleDanda→'. ';
 
