@@ -1,0 +1,157 @@
+# note: "strict transliteration"
+
+::NFC;
+
+$dv = [\u1B35-\u1B44];
+$c = [\u1B13-\u1B33 \u1B45-\u1B4C];
+
+[kgcjṭḍtdpb] { ᭄ᬳ } $dv → \:h;
+[kgcjṭḍtdpb] { ᭄ᬳ → \:ha; # disambiguation from aspirates
+
+
+ᬀ → ṁ\*; # ulu ricem / ardhacandra
+ᬁ → m̐; # ulu candra / candrabindu
+ᬂ → ṁ; # cecek / anusvara
+ᬃ → r\=; # surang / repha (note, "Indonesian mode" not "Indian mode")
+ᬄ → ḥ; # bisah / visarga
+ᬅ } $dv → q;
+ᬅ → A; # LETTER AKARA
+ᬆ → A\:; # LETTER AKARA TEDUNG
+ᬇ → I; # LETTER IKARA
+ᬈ → I\:; # LETTER IKARA TEDUNG
+ᬉ → U; # LETTER UKARA
+ᬊ → U\:; # LETTER UKARA TEDUNG
+ᬋ → R̥; # LETTER RA REPA
+ᬌ → R̥\:; # LETTER RA REPA TEDUNG
+ᬍ → L̥; # LETTER LA LENGA
+ᬎ → L̥̄; # LETTER LA LENGA TEDUNG
+ᬏ → E; # LETTER EKARA
+ᬐ → Ai; # LETTER AIKARA
+ᬑ → O; # LETTER OKARA
+ᬒ → O\:; # LETTER OKARA TEDUNG
+
+
+ᬓ } $dv → k;
+ᬓ → ka; # LETTER KA
+ᬔ } $dv → kh;
+ᬔ → kha; # LETTER KA MAHAPRANA
+ᬕ } $dv → g;
+ᬕ → ga; # LETTER GA
+ᬖ } $dv → gh;
+ᬖ → gha; # LETTER GA GORA
+ᬗ } $dv → ṅ;
+ᬗ → ṅa; # LETTER NGA
+ᬘ } $dv → c;
+ᬘ → ca; # LETTER CA
+ᬙ } $dv → ch;
+ᬙ → cha; # LETTER CA LACA
+ᬚ } $dv → j;
+ᬚ → ja; # LETTER JA
+ᬛ } $dv → jh;
+ᬛ → jha; # LETTER JA JERA
+ᬜ } $dv → ñ;
+ᬜ → ña; # LETTER NYA
+ᬝ } $dv → ṭ;
+ᬝ → ṭa; # LETTER TA LATIK
+ᬞ } $dv → ṭh;
+ᬞ → ṭha; # LETTER TA MURDA MAHAPRANA
+ᬟ } $dv → ḍ;
+ᬟ → ḍa; # LETTER DA MURDA ALPAPRANA
+ᬠ } $dv → ḍh;
+ᬠ → ḍha; # LETTER DA MURDA MAHAPRANA
+ᬡ } $dv → ṇ;
+ᬡ → ṇa; # LETTER NA RAMBAT
+ᬢ } $dv → t;
+ᬢ → ta; # LETTER TA
+ᬣ } $dv → th;
+ᬣ → tha; # LETTER TA TAWA
+ᬤ } $dv → d;
+ᬤ → da; # LETTER DA
+ᬥ } $dv → dh;
+ᬥ → dha; # LETTER DA MADU
+ᬦ } $dv → n;
+ᬦ → na; # LETTER NA
+ᬧ } $dv → p;
+ᬧ → pa; # LETTER PA
+ᬨ } $dv → ph;
+ᬨ → pha; # LETTER PA KAPAL
+ᬩ } $dv → b;
+ᬩ → ba; # LETTER BA
+ᬪ } $dv → bh;
+ᬪ → bha; # LETTER BA KEMBANG
+ᬫ } $dv → m;
+ᬫ → ma; # LETTER MA
+ᬬ } $dv → y;
+ᬬ → ya; # LETTER YA
+ᬭ } $dv → r;
+ᬭ → ra; # LETTER RA
+ᬮ } $dv → l;
+ᬮ → la; # LETTER LA
+ᬯ } $dv → v;
+ᬯ → va; # LETTER WA
+ᬰ } $dv → ś;
+ᬰ → śa; # LETTER SA SAGA
+ᬱ } $dv → ṣ;
+ᬱ → ṣa; # LETTER SA SAPA
+ᬲ } $dv → s;
+ᬲ → sa; # LETTER SA
+ᬳ } $dv → h;
+ᬳ → ha; # LETTER HA
+\u1B4C } $dv → j\=ñ;
+\u1B4C → j\=ña; # LETTER ARCHAIC JNYA
+
+᬴ → \*; # SIGN REREKAN (not present in DHARMA, "*" used as impromptu mark)
+ᬵ → ā; # VOWEL SIGN TEDUNG
+ᬶ → i; # VOWEL SIGN ULU
+ᬷ → ī; # VOWEL SIGN ULU SARI
+ᬸ → u; # VOWEL SIGN SUKU
+ᬹ → ū; # VOWEL SIGN SUKU ILUT
+ᬺ → r̥; # VOWEL SIGN RA REPA
+ᬻ → r̥\:; # VOWEL SIGN RA REPA TEDUNG
+ᬼ→ l̥; # VOWEL SIGN LA LENGA
+ᬽ → l̥\:; # VOWEL SIGN LA LENGA TEDUNG
+ᬾ → e; # VOWEL SIGN TALING
+ᬿ → ai; # VOWEL SIGN TALING REPA
+ᭀ → o; # VOWEL SIGN TALING TEDUNG
+ᭁ → au; # VOWEL SIGN TALING REPA TEDUNG
+ᭂ → ə; # VOWEL SIGN PEPET
+ᭃ → ə\:; # VOWEL SIGN PEPET TEDUNG
+᭄\u200C → ·; # explicit ADEG ADEG
+᭄ } $c → ; # ADEG ADEG
+᭄ → ·; # ADEG ADEG
+
+# (below not present in DHARMA, "*" used as impromptu mark)
+ᭅ } $dv → k\*;
+ᭅ → k\*a; # LETTER KAF SASAK
+ᭆ } $dv → kh\*;
+ᭆ → kh\*a; # LETTER KHOT SASAK
+ᭇ } $dv → t\*;
+ᭇ → t\*a; # LETTER TZIR SASAK
+ᭈ } $dv → p\*;
+ᭈ → p\*a; # LETTER EF SASAK
+ᭉ } $dv → v\*;
+ᭉ → v\*a; # LETTER VE SASAK
+ᭊ } $dv → j\*;
+ᭊ → j\*a; # LETTER ZAL SASAK
+ᭋ } $dv → s\*;
+ᭋ → s\*a; # LETTER ASYURA SASAK
+
+᭐ → 0; # DIGIT ZERO
+᭑ → 1; # DIGIT ONE
+᭒ → 2; # DIGIT TWO
+᭓ → 3; # DIGIT THREE
+᭔ → 4; # DIGIT FOUR
+᭕ → 5; # DIGIT FIVE
+᭖ → 6; # DIGIT SIX
+᭗ → 7; # DIGIT SEVEN
+᭘ → 8; # DIGIT EIGHT
+᭙ → 9; # DIGIT NINE
+᭚ → '<g type="panti"/>'; # PANTI
+᭛ → '<g type="pamada"/>'; # PAMADA
+᭜ → \@; # WINDU
+᭝ → '<g type="pamungkah"/>'; # CARIK PAMUNGKAH
+᭞ → \,; # CARIK SIKI
+᭟ → \,\,; # CARIK PAREREN
+᭠ → '<g type="pameneng"/>'; # PAMENENG
+\u1B7D → '<g type="pantiLantang"/>';
+\u1B7E → '<g type="pamadaLantang"/>';

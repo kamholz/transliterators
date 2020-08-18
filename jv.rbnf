@@ -18,7 +18,7 @@
 6: nem;
 7: =%%nomer=;
 
-%nomer-ng:
+%%nomer-ng:
 1: =%%nomer-cekak=;
 2: =%%nomer-cekak=ng;
 4: patang;
@@ -41,24 +41,24 @@ x.x: << koma >>;
 15: >%%nomer-cekak>las;
 16: >%%nomer-cekak>belas;
 17: >%%nomer-cekak>las;
-20: <%nomer-ng<puluh;
+20: <%%nomer-ng<puluh;
 21: >%%nomer-cekak>likur;
 25: selawé;
 26: >%%nomer-cekak>likur;
-30: <%nomer-ng<puluh[->>];
+30: <%%nomer-ng<puluh[->>];
 50: sèket[->>];
 60: sewidak[->>];
-70: <%nomer-ng<puluh[->>];
+70: <%%nomer-ng<puluh[->>];
 100: satus[ >>];
-200: <%nomer-ng< atus[ >>];
+200: <%%nomer-ng< atus[ >>];
 1000: sèwu[ >>];
-2000: <%nomer-ng< èwu[ >>];
+2000: <%%nomer-ng< èwu[ >>];
 10000/1000: << èwu[ >>];
 1000000: sayuta[ >>];
-2000000: <%nomer-ng< yuta[ >>];
+2000000: <%%nomer-ng< yuta[ >>];
 10000000/1000000: << yuta[ >>];
 1000000000: samilyar[ >>];
-2000000000: <%nomer-ng< milyar[ >>];
+2000000000: <%%nomer-ng< milyar[ >>];
 10000000000/1000000000: << milyar[ >>];
 1000000000000: =#,##0=;
 
@@ -79,10 +79,11 @@ x.x: << koma >>;
 1: =%%nomer-cekak-krama=;
 3: tigang;
 4: =%%nomer-cekak-krama=;
-6: =%nomer-ng=;
+6: =%%nomer-ng=;
 
 %spellout-cardinal-krama:
 x.x: << koma >>;
+-x: negatif >>;
 0: das;
 1: =%%nomer-krama=;
 10: sedasa;
