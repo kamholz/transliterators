@@ -1,7 +1,5 @@
 # note: "strict transliteration"
 
-# ***WIP***
-
 ::NFC;
 
 $dv = [\u1B35-\u1B44];
