@@ -5,8 +5,9 @@
 # for PanLex (panlex.org)
 
 ::[:Latin:]lower();
+
 $vowel = [aɐɛeiɔouœɵyː];
-'' ← \u0329; # syllabic
+ ← \u0329; # syllabic
 | ng ↔ | ŋ;
 [^$vowel] { ([mŋ]) } [^$vowel] → $1\u0329; # syllabic
 oe ↔ œː;
@@ -40,3 +41,10 @@ z ↔ ts;
 8 → ˧;
 6 ↔ ˨;
 9 → ˨;
+
+:: Null;
+
+s ← ɕ;
+˥ ← ˥˧;
+a ← ɑ;
+˩˧ ← ˨˧;
